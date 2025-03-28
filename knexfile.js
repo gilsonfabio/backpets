@@ -4,10 +4,10 @@ module.exports = {
   development: {
     client: '',
     connection: {
-      host : "innvento.mysql.dbaas.com.br",
-      database: "innvento",
-      user: "innvento",
-      password: "Innvento@0669"
+      host : "adotapets.mysql.dbaas.com.br",
+      database: "adotapets",
+      user: "adotapets",
+      password: "Pets@0669"
     },
     migrations: {
       directory: ''
@@ -34,10 +34,10 @@ module.exports = {
   production: {
     client: 'mysql',
     connection: {
-      host : "innvento.mysql.dbaas.com.br",
-      database: "innvento",
-      user: "innvento",
-      password: "Innvento@0669"
+      host : "adotapets.mysql.dbaas.com.br",
+      database: "adotapets",
+      user: "adotapets",
+      password: "Pets@0669"
     },
     
     pool: {
