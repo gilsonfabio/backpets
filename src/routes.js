@@ -2,25 +2,27 @@ const express = require('express');
 const routes = express.Router();
 
 const UsersController = require('./controllers/UsersController');
-const ProductsController = require('./controllers/ProductsController');
-const GruposController = require('./controllers/GruposController');
+const PetsController = require('./controllers/PetsController');
+const OngsController = require('./controllers/OngsController');
 
 routes.get('/', (request, response) => {
     response.json({
-        message: 'Bem-vindo ao servidor Pets!',
+        message: 'Bem-vindo ao servidor Pets! (versão 1.00)',
     });
 });
 
 routes.post('/signIn', UsersController.signIn);
 routes.post('/newuser', UsersController.newuser);
 
-routes.get('/produtos', ProductsController.index);
-routes.post('/newproduct', ProductsController.create);
-routes.get('/detproduct/:proId', ProductsController.detProduct);
-routes.get('/searchPro/:idPro', ProductsController.searchPro);
-routes.get('/linprodutos/:idLnh', ProductsController.lnhProdutos);
+routes.get('/pets', PetsController.index);
+routes.post('/newpet', PetsController.create);
+routes.get('/search/:idPet', PetsController.search);
+routes.put('/updPet', PetsController.update);
 
-routes.get('/grupos', GruposController.index);
-routes.post('/newgrupo', GruposController.create);
+routes.get('/ongs', OngsController.index);
+routes.post('/newong', OngsController.create);
+routes.get('/search/:idOng', OngsController.search);
+routes.put('/updOng', OngsController.update);
+
 
 module.exports = routes;
